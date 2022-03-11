@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-
+import { Link } from 'react-router-dom'
 /*
     {
           "month": "01-2021",
@@ -41,12 +41,18 @@ const renderList = list => {
     )
 }
 
+const handleClick = () => {
+    console.log('ok')
+}
+
 const Tarjeta = ({ month }) => {
   return (
-    <Container style={{ backgroundColor: "#f094", marginBottom: "16px" }}>
+    <Container
+    onClick={handleClick}
+    style={{ backgroundColor: "#f094", marginBottom: "16px", borderRadius: "10px" }}>
       <Row>
         <Row>
-          <h1>{month.date}</h1>
+          <Link to={"/details/" + month.date} state={month} ><h1>{month.date}</h1></Link>
         </Row>
         <Row>
           <Col>
