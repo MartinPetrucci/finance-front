@@ -1,0 +1,73 @@
+
+
+.month-card {
+    color: blue;
+    background-color: beige;
+    margin: 20px;
+    padding-bottom: 16px;
+    width: 70vw;
+    position: relative;
+    left: 15vw;
+}
+
+.month-header > p {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    margin: 0;
+}
+
+.balance {
+    /* background-color: red; */
+    position: relative;
+}
+
+.numbers {
+    /* background-color: yellow; */
+    width: 50%;
+}
+
+.numbers > p {
+    font-size: 1rem;
+    width: fit-content;
+    
+}
+
+.total {
+    /* background-color: blueviolet; */
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+}
+
+.total > p {
+    font-size: 1.5rem;
+}
+
+
+
+.month-header {
+    background-color: #1D46AE;
+    color: white;
+}
+
+
+.arrow {
+    width: 2%;
+    height: 100%;
+    background-color: rgb(70, 173, 22);
+    position: absolute;
+    left: 46%;
+    top: 0;
+}
+
+.month-body {
+    background-color: red;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

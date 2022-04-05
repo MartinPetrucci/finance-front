@@ -1,0 +1,24 @@
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: antiquewhite; */
+    width: 100%;
+    padding: 16px;
+    margin: 16px;
+}
+
+.group > input, select {
+    margin: 5px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.group > button {
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 500;
+    border: 1px solid #1766DC;
+}
+

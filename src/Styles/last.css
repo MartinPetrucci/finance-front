@@ -1,0 +1,285 @@
+.year {
+  /* background-color: rgb(255, 255, 255); */
+  width: 100vw;
+  /* height: 100px; */
+  padding: -5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+  background-color: #2c3a6e;
+}
+
+.year-number {
+  color: white;
+  font-size: 5rem;
+  margin: -25px;
+}
+
+.year-balance {
+  margin: 0;
+  color: green;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.month-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 5, 24);
+  width: 100vw;
+}
+.cardd {
+  /* position: relative; */
+  display: flex;
+  min-height: 450px;
+  width: 70vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 16px 30px 16px;
+  padding: 6px;
+  border: solid 1px rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: #2c3a6e;
+  box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
+}
+
+.cardd-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: rgb(0, 5, 24);
+  width: 100%;
+  border: solid 1px black;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+}
+
+
+
+.dos {
+  text-align: center;
+  padding-left: 30px;
+  /* padding: 10px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* display: flex;
+  flex-direction: column;
+  background-color: rgb(60, 145, 90); */
+}
+
+.dos > h2 {
+  font-size: 52px;
+}
+
+.uno {
+  background-color: rgb(0, 5, 24);
+  width: 221px;
+  height: 100px;
+}
+
+.tres {
+  padding-right: 30px;
+  padding-top: 10px;
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+  /* width: 100px;
+  height: 100px; */
+  /* background-color: #3e80dd; */
+  /* margin-left: auto; */
+  /* display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  background-color: rgb(60, 145, 90); */
+}
+
+.tres > select {
+  background-color: rgb(0, 5, 24);
+  color: white;
+}
+
+.tres > button {
+  height: 30px;
+  color: white;
+  background: #000518;
+  margin-left: 6px;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+.month-data {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 32px;
+}
+
+.extras {
+}
+
+
+.cardd-header > p {
+  font-size: 30px;
+  margin-top: 0; 
+}
+
+.cardd-header > h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.cardd-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 0px;
+}
+
+.box {
+  /* position: relative; */
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px 16px 16px 16px;
+  width: 50%;
+  color: black;
+  background-color: #2c3a6e;
+}
+
+.box-header {
+  background-color: white;
+  border: solid 2px black;
+  padding: 12px 12px 12px 12px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.box-header>p {
+  font-size: 29px;
+  font-weight: 450;
+  margin: 0;
+}
+
+.box-header > h2 {
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.items {
+  background-color: white;
+  width: 100%;
+  border: solid 1.9px black;
+  padding: 12px 12px 12px 12px;
+  margin: 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 100%;
+  margin: 0;
+  background: #dddddd;
+}
+
+.details > p {
+  margin: 0px 15px 0px 15px;
+}
+
+.income, .expense {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  /* justify-content: space-between; */
+  margin: 5px;
+  padding: 10px;
+  /* background-color: rgb(255, 255, 255); */
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 10px;
+
+}
+.income {
+  background-color: rgba(146, 242, 148, 0.5);
+}
+.income:hover {
+  background-color: rgb(86 177 88 / 90%);
+  cursor: pointer;
+}
+.expense {
+  background-color: rgb(255, 128, 128, 0.5);
+}
+.expense:hover {
+  background-color: rgb(219 53 53 / 76%);
+  cursor: pointer;
+}
+
+
+
+
+
+.item>p {
+  margin: 0;
+}
+
+.add-item {
+  width: 100%;
+  background: #e8e8e8;
+  cursor: pointer;
+  transition: 0.3 ease all;
+  border-radius: 5px;
+  border: #0b2a90;
+  height: 50px;
+  background-color: #000518;
+  font-size: 30px;
+  color: aliceblue;
+  font-weight: 600;
+  /* margin-top: auto; */
+}
+
+.group {
+  margin: 0 !important;
+}
+
+.group>button {
+  margin-top: 30px !important;
+}
+
+input,
+select {
+  margin-bottom: 5px !important;
+}
+
+label {
+  width: 100%;
+  font-weight: 500;
+}
