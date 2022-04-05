@@ -1,11 +1,12 @@
 import "../Styles/modal.css";
-import { useState, useEffect } from "react";
+import { enabledScroll } from "../utils/formatters";
 
-const Modal = ({ children, visibility, setVisibility }) => {
+const Modal = ({ children, visibility, setVisibility, onClose }) => {
   
 
   const closeModal = () => {
-      document.querySelector("body").classList.remove("stop-scrolling")
+      if(onClose !== undefined) onClose()
+      enabledScroll(true)
       setVisibility(false)
   };
 

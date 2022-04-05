@@ -117,3 +117,24 @@ export const commaToPoint = (float) => {
       : integers;
   return `${formattedIntegers},${decimals || "00"}`;
 };
+
+export const getBalance = (exchange, incomes, expenses) => {
+  let balance = exchange.conversion(getTotal(incomes) - getTotal(expenses));
+  let style =
+    balance > 0
+      ? { color: "green", sign: "+" }
+      : balance < 0
+      ? { color: "red", sign: "" }
+      : { color: "white", sign: "" };
+  return (
+    <p style={{ fontWeight: "500", fontSize: "32px", color: style.color }}>
+      {exchange.currency}
+      {commaToPoint(balance)}
+    </p>
+  );
+};
+
+export const enabledScroll = (isEnabled) => {
+    if(isEnabled) document.querySelector("body").classList.remove("stop-scrolling");
+    else document.querySelector("body").classList.add("stop-scrolling");
+} 

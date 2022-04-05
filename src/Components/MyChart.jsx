@@ -88,7 +88,6 @@ const MyChart = ({ incomes, expenses, exchange }) => {
         borderJoinStyle: "round",
         hoverBackgroundColor: "white",
         hoverBorderJoinStyle: "round",
-        // backgroundColor: "rgba(255, 99, 132, 0.5)",
       },
     ],
   };
