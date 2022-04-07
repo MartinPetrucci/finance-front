@@ -1,19 +1,8 @@
-import { commaToPoint } from "../utils/formatters";
-import { useState } from "react";
-import Modal from "./Modal";
-import { deleteItem } from "../Request/axios";
-
+import { commaToPoint } from "../../utils/formatters";
 const Item = ({ className, item, exchange }) => {
-
-
-
   return (
     <>
-      
-      <div
-        className={className}
-        id={item._id}
-      >
+      <div className={className} id={item._id}>
         <div className="circle"></div>
         <div className="details">
           <p style={{ fontWeight: "600" }}>{item.details}</p>

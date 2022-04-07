@@ -1,7 +1,7 @@
 import "../Styles/modal.css";
 import { enabledScroll } from "../utils/formatters";
 
-const Modal = ({ children, visibility, setVisibility, onClose }) => {
+const Modal = ({ children, title, visibility, setVisibility, onClose }) => {
   
 
   const closeModal = () => {
@@ -18,7 +18,7 @@ const Modal = ({ children, visibility, setVisibility, onClose }) => {
       >
         <div className="window">
           <div className="modal-header">
-            <h3>Add item</h3>
+            <h3>{title}</h3>
           </div>
           <button onClick={closeModal} className="close-button">
             <svg

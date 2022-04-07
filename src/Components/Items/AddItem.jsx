@@ -43,7 +43,7 @@ const AddItem = ({ incomes, setIncomes, expenses, setExpenses, month }) => {
       <button className="add-item" onClick={openModal}>
         ADD ITEM
       </button>
-      <Modal visibility={visibility} setVisibility={setVisibility} onClose={resetForm}>
+      <Modal title={"Add item"} visibility={visibility} setVisibility={setVisibility} onClose={resetForm}>
         <form id="addItemForm" className="group">
           <label htmlFor="Concept">Concept</label>
           <select name="concept" id={`select${month}`}>

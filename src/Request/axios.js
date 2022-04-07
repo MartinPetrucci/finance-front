@@ -24,3 +24,8 @@ export const deleteItem = async (itemId) => {
   return response.data
 }
 
+export const updateItem = async (itemId, updatedItem) => {
+  const response = await axios.put(`${API}/items?itemId=${itemId}`,updatedItem)
+  return response.data
+}
+

@@ -4,7 +4,7 @@ import "../Styles/chart.css";
 import { commaToPoint } from "../utils/formatters";
 import { useEffect } from "react";
 
-const MyChart = ({ incomes, expenses, exchange }) => {
+const MyChart = ({ visibility, incomes, expenses, exchange }) => {
   
   useEffect(()=>{
   },[])
@@ -93,18 +93,17 @@ const MyChart = ({ incomes, expenses, exchange }) => {
   };
 
   return (
-    <>
       <Line
         options={options}
         data={data}
         style={{
-          display: "block",
+          display: visibility ? "block" : "none",
           boxSizing: "borderBox",
           height: "100px",
           width: "200px",
+          transition: "ease 1s"
         }}
       />
-    </>
   );
 };
 
