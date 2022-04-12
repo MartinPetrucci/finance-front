@@ -11,15 +11,12 @@ const AddItem = ({ incomes, setIncomes, expenses, setExpenses, month }) => {
     setVisibility(true);
   };
 
-  const resetForm = () => {
-    const form = document.querySelector("#addItemForm");
-    form.reset()
-  }
-
   const sendForm = async (e) => {
     e.preventDefault();
+    console.log(e.target.parentElement)
     //validaciones
-    const form = document.querySelector("#addItemForm");
+    // const form = document.querySelector(`#addItemForm${month}`);
+    const form = e.target.parentElement
     const newItem = Object.fromEntries(new FormData(form));
     try {
       const addedItem = await addItem({ ...newItem, userId: "62310f4c8a254e63fd7b1bc9" });
@@ -33,7 +30,7 @@ const AddItem = ({ incomes, setIncomes, expenses, setExpenses, month }) => {
     } catch (error) {
       console.error(error);
     }
-    resetForm()
+    form.reset()
     enabledScroll(true)
     setVisibility(false);
   };
@@ -43,7 +40,7 @@ const AddItem = ({ incomes, setIncomes, expenses, setExpenses, month }) => {
       <button className="add-item" onClick={openModal}>
         ADD ITEM
       </button>
-      <Modal title={"Add item"} visibility={visibility} setVisibility={setVisibility} onClose={resetForm}>
+      <Modal title={"Add item"} visibility={visibility} setVisibility={setVisibility}>
         <form id="addItemForm" className="group">
           <label htmlFor="Concept">Concept</label>
           <select name="concept" id={`select${month}`}>
@@ -53,10 +50,11 @@ const AddItem = ({ incomes, setIncomes, expenses, setExpenses, month }) => {
           <label htmlFor="details">Details</label>
           <input type="text" name="details" />
           <label htmlFor="amount">Amount</label>
-          <input type="number" name="amount" />
+          <input type="number" name="amount" onChange={(e)=>console.log(e.target.value)}/>
           <label htmlFor="date">Date</label>
           <input type="date" name="date" defaultValue={truncateDate(month)} />
           <button onClick={sendForm}>SAVE</button>
+          {/* <button onClick={(e)=>sendForm(e)}>SAVE</button> */}
         </form>
       </Modal>
     </>

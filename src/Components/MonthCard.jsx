@@ -37,7 +37,7 @@ const MonthCard = ({ monthInfo }) => {
   const [incomes, setIncomes] = useState(monthInfo.INCOME);
   const [expenses, setExpenses] = useState(monthInfo.EXPENSE);
   const [exchange, setExchange] = useState(exchanges[0]);
-  const [chartVisibility, setChartVisibility] = useState(true) 
+  const [chartVisibility, setChartVisibility] = useState(false);
 
   const changeCurrency = () => {
     const currency = document.querySelector(
@@ -48,7 +48,32 @@ const MonthCard = ({ monthInfo }) => {
     setExchange(obj);
   };
 
-  
+  const handleChartVisibility = () => {
+    const obj = !chartVisibility ? {text:"Show chart", path: "M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"}
+     : {text: "Hide chart", path: "M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z"};
+
+    return (
+      <>
+        <p style={{ textDecoration: "underline", fontWeight: "400"}}>{obj.text}</p>
+        <svg
+          style={{
+            width: "21px",
+            height: "28px",
+            marginLeft: "5px",
+          }}
+          id="caretDown"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-caret-down"
+          viewBox="0 0 16 16"
+        >
+          <path d={obj.path} />
+        </svg>
+      </>
+    );
+  };
 
   return (
     <>
@@ -75,19 +100,23 @@ const MonthCard = ({ monthInfo }) => {
               </p>
             </div>
           </div>
-          <div className="showChart"
-          onClick={()=>{
-            setChartVisibility(!chartVisibility)
-            console.log('click')}}>
-            <p
-            style={{textDecoration: "underline", fontWeight: "400"}}
-            >Show chart </p>
-            <svg
-            style={{
-              width: "21px",
-              height: "28px",
-              marginLeft: "5px",
+          <div
+            className="showChart"
+            onClick={() => {
+              setChartVisibility(!chartVisibility);
+              console.log("click");
             }}
+          >
+            {handleChartVisibility()}
+            {/* <p style={{ textDecoration: "underline", fontWeight: "400" }}>
+              Show chart{" "}
+            </p>
+            <svg
+              style={{
+                width: "21px",
+                height: "28px",
+                marginLeft: "5px",
+              }}
               id="caretDown"
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -97,10 +126,15 @@ const MonthCard = ({ monthInfo }) => {
               viewBox="0 0 16 16"
             >
               <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
-            </svg>
+            </svg> */}
           </div>
         </div>
-        <Chart visibility={chartVisibility} incomes={incomes} expenses={expenses} exchange={exchange} />
+        <Chart
+          visibility={chartVisibility}
+          incomes={incomes}
+          expenses={expenses}
+          exchange={exchange}
+        />
         <div className="cardd-body">
           <div className="box">
             <div

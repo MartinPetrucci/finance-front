@@ -82,7 +82,7 @@ export const getExchange = (month) => {
     },
     {
       month: "2022-04",
-      price: 151.43,
+      price: 195.00,
     },
   ];
   const data = exchange.find((elem) => elem.month === month);
