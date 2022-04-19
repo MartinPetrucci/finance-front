@@ -13,6 +13,15 @@ export const logIn = async (userData) => {
   }
 };
 
+export const register = async (userData) => {
+  try {
+    const response = await axios.post(`${API}/users/register`, userData)
+    return response.data
+  } catch({response}) {
+    throw new Error(response.data.message)
+  }
+}
+
 export const getDollarRate = async () => {
   const endpoint =
     "https://api-dolar-argentina.herokuapp.com/api/evolucion/dolarblue";

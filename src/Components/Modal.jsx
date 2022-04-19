@@ -1,11 +1,11 @@
 import "../Styles/modal.css";
 import { enabledScroll } from "../utils/formatters";
-
-const Modal = ({ children, title, visibility, setVisibility, onClose }) => {
+const NO_OP = () => {}
+const Modal = ({ children, title, visibility, setVisibility, onClose = NO_OP}) => {
   
 
   const closeModal = () => {
-      if(onClose !== undefined) onClose()
+      onClose()
       enabledScroll(true)
       setVisibility(false)
   };

@@ -33,7 +33,6 @@
   width: 100vw;
 }
 .cardd {
-  /* position: relative; */
   display: flex;
   min-height: 450px;
   width: 70vw;
@@ -60,17 +59,9 @@
   color: rgb(0, 0, 0);
 }
 
-
-
 .dos {
   text-align: center;
   padding-left: 30px;
-  /* padding: 10px; */
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  /* display: flex;
-  flex-direction: column;
-  background-color: rgb(60, 145, 90); */
 }
 
 .dos > h2 {
@@ -99,26 +90,12 @@
   cursor: pointer;
 }
 
-/* .caretDown {
-    height: 20px !important;
-    width: 20px !important;
-    
-} */
-
 .tres {
   padding-right: 30px;
   padding-top: 21px;
   display: flex;
   height: 100px;
   flex-direction: column;
-  /* width: 100px;
-  height: 100px; */
-  /* background-color: #3e80dd; */
-  /* margin-left: auto; */
-  /* display: flex;
-  align-self: flex-end;
-  flex-direction: column;
-  background-color: rgb(60, 145, 90); */
 }
 
 .tres > select {
@@ -133,16 +110,6 @@
   margin-left: 6px;
   font-style: italic;
 }
-
-
-
-
-
-
-
-
-
-
 
 .month-data {
   display: flex;
